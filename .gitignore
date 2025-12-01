@@ -1,0 +1,7 @@
+# .gitignore
+**/_opam/
+**/_build/
+
+**/input.txt
+
+
