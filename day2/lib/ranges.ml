@@ -21,7 +21,7 @@ let check_repeat_n n id =
         if String.equal current_chunk repeat then aux (pos + repeat_len)
         else false
     in
-    aux 0
+    aux repeat_len
 
 let check_any_repeat id =
   let rec aux n =
