@@ -17,12 +17,6 @@ let parse_input_lines lines =
   in
   aux false ([], []) lines
 
-let rec is_fresh ingredient = function
-  | [] -> false
-  | (s, e) :: tl ->
-      if ingredient >= s && ingredient <= e then true
-      else is_fresh ingredient tl
-
 let get_num_fresh fresh_ranges available =
   let is_fresh ingredient =
     List.fold fresh_ranges ~init:false ~f:(fun fresh (s, e) ->
